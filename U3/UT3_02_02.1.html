@@ -1,0 +1,29 @@
+<!-- Investiga como utilizar el objeto window.history para crear en un documento html 
+(con cualquier contenido) dos botones que vuelvan a la página anterior y a la siguiente. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <script>
+        function crearVentana(){
+            window.location.href = "UT3_02_02.2";
+        }
+        function volver(){
+            history.back();
+        }
+        function siguiente(){
+            history.forward();
+        }
+    </script>
+</head>
+<body>
+    <h1>Página 1</h1>
+    <button onclick="volver()">volver</button>
+    <button onclick="siguiente()">siguiente</button>
+    <button onclick="crearVentana()">Crear ventana</button>
+</body>
+</html>
+
+<!-- https://www.w3schools.com/js/js_window_history.asp -->

@@ -1,0 +1,102 @@
+<!-- Realizar una aplicación en JavaScript que realice lo siguiente:
+
+Abra una nueva ventana no redimensionable.
+Hacer una función y dentro de esa función:
+Escribir en la nueva ventana <h3>Ejemplo de Ventana Nueva</h3>
+URL Completa: XXXXX
+Protocolo utilizado: XXXXX
+Nombre en código del navegador: XXXXX
+Que detecte si está JAVA disponible en esa ventana del navegador y si es así que escriba:
+Java SI disponible en esta ventana, o bien.
+Java NO disponible en esta ventana.
+
+Y ahora fuera del código de la función que siga haciendo lo siguiente:
+
+Que escriba en la ventana principal <h1>TAREA DWEC03</H2><HR />
+Que solicite: introduzca su nombre y apellidos.
+Que solicite: introduzca DIA de nacimiento.
+Que solicite: introduzca MES de nacimiento.
+Que solicite: introduzca AÑO de nacimiento.
+
+Una vez solicitados esos datos imprimirá en la ventana principal:
+Buenos dias XXXXX
+Tu nombre tiene XX caracteres, incluidos espacios.
+La primera letra A de tu nombre está en la posición: X
+La última letra A de tu nombre está en la posición: X
+Tu nombre menos las 3 primeras letras es: XXXXXXXX
+Tu nombre todo en mayúsculas es: XXXXXXXX
+Tu edad es: XX años.
+Naciste un feliz XXXXXX del año XXXX.
+El coseno de 180 es: XXXXXXXXXX
+El número mayor de (34,67,23,75,35,19) es: XX
+Ejemplo de número al azar: XXXXXXXXXX
+Donde aparecen las XXXX tendrá que aparecer el cálculo o texto que corresponda. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function funcion(){
+          
+            var ventana= window.open("", "nuevaVentana", "width=1600,height=800,resizable=false");
+            ventana.document.write("<h3>Ejemplo de Ventana Nueva</h3>");
+            ventana.document.write("URL completa: " + ventana.document.URL + "<br><br>");
+            ventana.document.write("Protocolo utilizado: " + ventana.document.location.protocol + "<br><br>");
+            ventana.document.write("Nombre en codigo del navegador:" + navigator.appCodeName + "<br><br>")
+    
+            if (navigator.javaEnabled) {
+              ventana.document.write("Java SI disponible en esta ventana<br>");
+            } else {
+              ventana.document.write("Java NO disponible en esta ventana<br>");
+            }
+        }
+
+
+        
+
+        document.write("<h1>TAREA DWEC03</H2><HR />");
+        var nombre = window.prompt("Introduzca su nombre y apellidos.");
+        var dia = window.prompt("Introduce tu dia de nacimiento");
+        var mes = window.prompt("Introduce tu mes de nacimiento");
+        var a = window.prompt("Introduce tu año de nacimiento");
+    
+        document.write("Buenos dias " + nombre + "<br><br>");
+        document.write("Tu nombre tiene" + nombre.length + " caracteres, incluidos los espacios<br><br>");
+        document.write("La primera letra A de tu nombre esta en la posicion: " + (nombre.indexOf("a") -1) + "<br><br>");
+        document.write("La ultima letra A de tu nombre esta en la posicion: " + (nombre.lastIndexOf("a") + 1) + "<br><br>");
+        document.write("Tu nombre menos las 3 primeras letras es: " + nombre.substring(3) + "<br><br>");
+        document.write("Tu nombre todo en mayúsculas es: " + nombre.toUpperCase(nombre) + "<br><br>");
+        document.write("El coseno de 180 es: " + Math.cos(180).toFixed(4) + "<br><br>");   
+        document.write("El numero mayor de (34,67,23,75,35,19) es: " + Math.max(34,67,23,75,35,19) + "<br><br>");
+        document.write("Ejemplo de número al azar: "  + (Math.random() * 100).toFixed(2) + "<br><br>");
+        
+        var fechaNac = new Date(a, mes - 1, dia); 
+        var dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        var posicionDia = fechaNac.getDay();
+        var diaSemana = dias[posicionDia];
+        document.write("Naciste un feliz " + diaSemana);
+
+        
+        
+        funcion();
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+<!-- https://lineadecodigo.com/javascript/abrir-una-ventana-que-no-se-pueda-redimensionar/ -->
+<!-- https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods -->
+<!-- https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/cos -->
+<!-- https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/max -->
+<!-- https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay -->

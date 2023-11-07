@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación entre Ventanas</title>
+    <script>
+        var ventanaHija;
+
+        function abrirVentanaHija() {
+            ventanaHija = window.open("ventana_hija.html", "_blank", "width=400,height=400");
+        }
+
+        function enviarMensajeHaciaHija() {
+            const mensaje = document.getElementById('mensajePadre').value;
+            ventanaHija.postMessage({ type: 'padre', message: mensaje }, '*');
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'hija') {
+                const mensajeRecibidoHija = document.getElementById('mensajeRecibidoHija');
+                mensajeRecibidoHija.textContent = event.data.message;
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Ventana padre</h1>
+    <button onclick="abrirVentanaHija()">Abrir Ventana Hija</button>
+    <br><br>
+    <label for="mensajePadre">Mensaje a enviar a la ventana hija: </label>
+    <input type="text" id="mensajePadre" placeholder="Escribe un mensaje">
+    <button onclick="enviarMensajeHaciaHija()">Enviar Mensaje a Hija</button>
+    <br><br>
+    <p>Mensaje recibido de ventana hija: <span id="mensajeRecibidoHija"></span></p>
+
+</body>
+</html>
+

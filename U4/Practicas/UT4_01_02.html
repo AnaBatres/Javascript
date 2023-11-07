@@ -1,0 +1,31 @@
+<!-- Sigue los pasos del vídeo y genera el código necesario para cargar un fichero de texto.
+A continuación se va a modificar el código para que en vez de aparecer en la página html el contenido del fichero, se cargue en un array llamado datos. Para ello, se debe añadir la declaración de la variable tipo array:
+var datos = new Array();
+Y a continuación, se asigna el contenido de cada línea del fichero al array, teniendo en cuenta hay que dividir en partes todo el string de contenido, como la separación es línea a línea, se utiliza como delimitador '\n'-
+datos = contenido.split('\n');
+Por último, visualizamos el array datos. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="UT4_01_02.js"></script>
+</head>
+<body>
+    <div id="contenedor">
+        <section id="zonaformulario">
+
+            <form name="formulario">
+                <p>Archivos: <br> <input type="file" name="archivo" id="archivos"></p>
+            </form>
+
+        </section>
+
+        <section id="zonadatos">
+            <p></p>
+        </section>
+
+    </div>
+</body>
+</html>

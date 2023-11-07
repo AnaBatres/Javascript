@@ -1,0 +1,23 @@
+<!-- Crea una ventana que se abra con el aula virtual del curso DWEC en Educamadrid y posicionala con su esquina superior-izq 
+en el centro exacto de tu pantalla. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula Virtual DWEC</title>
+    
+    <script>
+        var anchoVentana = 800;
+        var altoVentana = 400;
+        
+        var opciones = 'width=' + anchoVentana + ',height=' + altoVentana;
+        
+        var ventana = window.open('https://aulavirtual3.educa.madrid.org/ies.lagunadejoatzel.getafe/course/view.php?id=616', 
+                                'AulaVirtualDWEC', opciones);
+        ventana.moveTo(800, 800); 
+    </script>
+
+</head>
+<body>
+</body>
+</html>

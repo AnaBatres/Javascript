@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="delegados.css">
+    <script src="Practica3.js"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div>
+            <section id="zonaformulario">
+                <form name="formulario">
+                    <p>Selecciona un archivo de alumnos: <input type="file" name="archivo" id="archivos"></p>
+                </form>
+            </section>
+            <div id="zonadatos"></div>
+            <div id ="selectCandidatos" style="visibility: hidden;"> 
+                <br><br>
+                <select id="candidatos" multiple="true"></select>
+                <br><br>
+                <button id="enviar" onclick="votarCandidatos()">Enviar</button>
+            </div>
+        </div>
+        <div>
+            <h3 id="h3"></h3>
+            <div id="textoCandidatos"></div>
+            <br><br>
+            <button id="votar" onclick="votarDelegado()" style="visibility: hidden;">Iniciar la votacion</button>
+            <br><br>
+            <h3 id="resultadosEncabezado"></h3>
+            <div id="resultados">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

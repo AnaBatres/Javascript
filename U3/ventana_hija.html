@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Hija</title>
+    <script>
+        function enviarMensajeHaciaPadre() {
+            const mensaje = document.getElementById('mensajeHija').value;
+            window.opener.postMessage({ type: 'hija', message: mensaje }, '*');
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'padre') {
+                const mensajeRecibidoPadre = document.getElementById('mensajeRecibidoPadre');
+                mensajeRecibidoPadre.textContent = event.data.message;
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Ventana Hija</h1>
+    <label for="mensajeHija">Mensaje a enviar a la ventana padre: </label>
+    <input type="text" id="mensajeHija" placeholder="Escribe un mensaje">
+    <button onclick="enviarMensajeHaciaPadre()">Enviar Mensaje a Padre</button>
+    <br><br>
+    <p>Mensaje recibido de ventana padre: <span id="mensajeRecibidoPadre"></span></p>
+
+</body>
+</html>

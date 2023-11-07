@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Practica4.js"></script>
+
+</head>
+<body>
+    <section id="zonaformulario">
+        <form name="formulario">
+            <p>Selecciona un archivo de alumnos: <input type="file" name="archivo" id="archivos"></p>
+        </form>
+    </section>
+    <div id="zonadatos"></div>
+    <div id ="selectCandidatos" style="visibility: hidden;"> 
+        <br><br>
+        <select id="candidatos" multiple="true"></select>
+        <br><br>
+        <button id="enviar" onclick="votarCandidatos()">Enviar</button>
+    </div>
+</body>
+</html>
