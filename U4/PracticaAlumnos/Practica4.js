@@ -44,7 +44,7 @@ function procesar(e) {
         alumnos.push(alumno);
       }
     });
-
+    
     visualizarDatos();
     cargarSelect();
 

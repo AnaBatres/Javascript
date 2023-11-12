@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Practica5.js"></script>
+    <link rel="stylesheet" href="Practica5.css">
+
+</head>
+
+<body>
+    <section id="zonaformulario">
+        <form name="formulario">
+            <p>Selecciona un archivo de alumnos: <input type="file" name="archivo" id="archivos"></p>
+        </form>
+    </section>
+
+    <div id="zonadatos">
+        <form>
+            <label>Ciclista</label><br>
+            <input type="text" id="nombre" name="nombre" disabled><br>
+            <label>Potencia</label><br>
+            <input type="text" id="potencia" name="potencia" disabled><br>
+            <label>Peso</label><br>
+            <input type="text" id="peso" name="peso" disabled><br>
+            <label>VO2MAX</label><br>
+            <input type="text" id="VO2MAX" name="VO2MAX" disabled>
+        </form>
+        <br><br>
+        <button id="siguiente" onclick="siguienteCiclista()">Siguiente</button>
+        <button id="anterior" onclick="anteriorCiclista()">Anterior</button>
+    </div>
+</body>
+
+</html>
