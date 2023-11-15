@@ -1,0 +1,29 @@
+¡Claro! Aquí tienes un enunciado de ejercicio que combina la comunicación entre ventanas, 
+el manejo de objetos y el uso de tablas en JavaScript:
+
+Enunciado del ejercicio: Sistema de gestión de empleados
+
+Crea una aplicación web para gestionar una lista de empleados. 
+La aplicación constará de dos ventanas: una principal y una secundaria.
+
+Ventana Principal:
+
+Mostrará una tabla con la lista de empleados, incluyendo nombre, edad, cargo y salario.
+Tendrá un botón "Agregar Empleado" que abrirá la ventana secundaria para agregar un nuevo empleado.
+Deberá permitir la selección de un empleado de la tabla. Al seleccionar un empleado y hacer clic en un botón "Eliminar", 
+se eliminará dicho empleado de la tabla.
+Ventana Secundaria (Agregar Empleado):
+
+Contendrá un formulario con campos para ingresar nombre, edad, cargo y salario del nuevo empleado.
+Al hacer clic en un botón "Guardar", se añadirá un nuevo empleado a la tabla en la ventana principal.
+Esta ventana secundaria se cerrará al guardar el empleado.
+Requisitos:
+
+Utilizar objetos para representar a cada empleado, con propiedades para nombre, edad, cargo y salario.
+La comunicación entre las ventanas se realizará a través de window.postMessage() o localStorage.
+Utilizar funciones para manipular la tabla de empleados, agregando, eliminando y actualizando la información.
+Implementar validaciones simples en los campos del formulario (por ejemplo, no permitir campos vacíos).
+Puntos extras (opcionales):
+
+Implementar la persistencia de datos utilizando localStorage para que la lista de empleados persista después de recargar la página.
+Mejorar el diseño y la interfaz de usuario utilizando CSS para hacerla más atractiva y amigable.

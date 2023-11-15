@@ -55,7 +55,6 @@ function procesar(e) {
         console.log(ciclistas);
 
         visualizarDatos();
-
     };
 
     lector.readAsText(mi_archivo);
@@ -64,8 +63,6 @@ function procesar(e) {
 function visualizarDatos() {
     var titulo= document.getElementById("zonaformulario");
     titulo.innerHTML="";
-
-    
 
     ciclistas[i].calcularV02MAX(ciclistas[i].potencia, ciclistas[i].peso)
 
@@ -79,20 +76,40 @@ function visualizarDatos() {
     var h3 = document.createElement("h3");
     h3.textContent="Datos del ciclista: " + ciclistas[i].nombre;
     titulo.appendChild(h3);
+
+   botones();
 }
+
 
 function siguienteCiclista(){
-    if(i < ciclistas.length -1){
-        i = i +1;
+    if(i<ciclistas.length -1){
+        i=i + 1;
+    }
+    visualizarDatos(); 
+}
+function anteriorCiclista(){
+    if(i >= 1){
+        i = i - 1;
+    }
     visualizarDatos();
+}
+
+function botones(){
+    var botonAnterior = document.getElementById("anterior");
+    var botonSiguiente = document.getElementById("siguiente");
+    
+    if (i === ciclistas.length -1) {
+        botonSiguiente.style.visibility = 'hidden';
+    } else {
+        botonSiguiente.style.visibility = 'visible';
+    }
+
+    if (i === 0) {
+        botonAnterior.style.visibility = 'hidden';
+    } else {
+        botonAnterior.style.visibility = 'visible';
     }
 }
 
-function anteriorCiclista(){
-    if(i > 0){
-        i = i - 1;
-    visualizarDatos();
-    }
-}
 
 document.addEventListener("DOMContentLoaded", comenzar);

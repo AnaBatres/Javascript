@@ -57,6 +57,10 @@ button:hover {
     background-color: rgb(47, 77, 120);
 }
 
+button[disabled]{
+    background-color: black;
+}
+
 #archivos {
     padding: 10px;
     border: 1px solid #ccc;
