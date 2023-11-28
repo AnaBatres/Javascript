@@ -1,0 +1,6 @@
+Nombre|Apellido|Expediente|faltas 
+Fulanito|de Tal|2345B|15
+Celia|Cobos|3245Z|9
+Juan|Camacho|7777B|18
+Lucas|Soler|1245A|1
+David|Cano|3345A|2

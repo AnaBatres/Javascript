@@ -48,7 +48,8 @@ function procesar(e) {
         lineas.forEach((linea) => {
             const ciclistaPropiedades = linea.split('|');
             if (ciclistaPropiedades !== "") {
-                const ciclista = new Ciclista(ciclistaPropiedades[0].trim(), ciclistaPropiedades[1].trim(), ciclistaPropiedades[2].trim());
+                const ciclista = new Ciclista(ciclistaPropiedades[0].trim(), 
+                ciclistaPropiedades[1].trim(), ciclistaPropiedades[2].trim());
                 ciclistas.push(ciclista);
             }
         });
