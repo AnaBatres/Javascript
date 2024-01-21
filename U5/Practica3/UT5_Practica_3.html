@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="UT5_Practica_3.js"></script>
+</head>
+<body>
+    <form class="formulario">
+
+        <h2>Ejercicio 1</h2> 
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="Fecha" name="Fecha"><br><br>
+
+        <label for="rango">Rango:</label>
+        <input type="range" id="Rango" name="Rango" min="0" max="100"><br><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="Contrasena" name="Contrasena"><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="Telefono" name="Telefono" ><br><br>
+
+        <label for="web">URL:</label>
+        <input type="url" id="Web" name="Web" placeholder="https://example.com"><br><br>
+
+        <label for="color">Color:</label>
+        <input type="color" id="Color" name="Color"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="Email" name="Email"><br><br>
+
+
+        <h2>Ejercicio 2.2</h2>
+        <label>Select multiple:</label>
+        <select id="selectMultiple" multiple>
+            <option value="Opcion 1">Opcion 1</option>
+            <option value="Opcion 2">Opcion 2</option>
+            <option value="Opcion 3">Opcion 3</option>
+        </select>
+
+        <br><br>
+
+        <label>Select con agrupaciones:</label>
+        <select id="selectGroup">
+            <optgroup label="Opcion 1">
+                <option value="Opcion 1.1">Opcion 1.1</option>
+                <option value="Opcion 1.2">Opcion 1.2</option>
+            </optgroup>
+            <optgroup label="Opcion 2">
+                <option value="Opcion 2.1">Opcion 2.1</option>
+                <option value="Opcion 2.2">Opcion 2.2</option>
+            </optgroup>
+            <optgroup label="Opcion 3">
+                <option value="Opcion 3.1">Opcion 3.1</option>
+                <option value="Opcion 3.2">Opcion 3.2</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+
+        <input type="button" id="boton" value="Enviar">
+    </form>
+
+    <div class="zonadatos"></div>
+</body>
+</html>

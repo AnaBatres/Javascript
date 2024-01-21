@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="UT5_Practica_2.1.js"></script>
+    <link rel="stylesheet" href="UT5_Practica_2.1.css">
+</head>
+
+<body>
+    <form>
+        <label>Select:</label>
+        <select id="select">
+            <option value="Opcion 1">Opcion 1</option>
+            <option value="Opcion 2">Opcion 2</option>
+            <option value="Opcion 3">Opcion 3</option>
+        </select>
+
+        <br><br>
+
+        <label>Datalist:</label>
+        <input list="datalists" name="datalist" id="datalist">
+        <datalist id="datalists">
+            <option value="Opcion 1">
+            <option value="Opcion 2">
+            <option value="Opcion 3">
+        </datalist>
+
+        <br><br>
+
+        <input type="button" value="Enviar" onclick="mostrarDatos()">
+    </form>
+
+    <div id="zonadatos">Selecciona las opciones</div>
+</body>
+</html>
+
+
+<!-- https://es.stackoverflow.com/questions/553434/al-intentar-obtener-el-valor-del-atributo-data-de-un-datalist-el-valor-retorn -->

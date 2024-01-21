@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="UT5_Practica_2.2.js"></script>
+    <link rel="stylesheet" href="UT5_Practica_2.2.css">
+</head>
+
+<body>
+    <form>
+        <label>Select:</label>
+        <select id="select" multiple>
+            <option value="Opcion 1">Opcion 1</option>
+            <option value="Opcion 2">Opcion 2</option>
+            <option value="Opcion 3">Opcion 3</option>
+        </select>
+
+        <label>Select con agrupaciones:</label>
+        <select id="selectAg">
+            <optgroup label="Opcion 1">
+                <option value="Opcion 1.1">Opcion 1.1</option>
+                <option value="Opcion 1.2">Opcion 1.2</option>
+            </optgroup>
+            <optgroup label="Opcion 2">
+                <option value="Opcion 2.1">Opcion 2.1</option>
+                <option value="Opcion 2.2">Opcion 2.2</option>
+            </optgroup>
+            <optgroup label="Opcion 3">
+                <option value="Opcion 3.1">Opcion 3.1</option>
+                <option value="Opcion 3.2">Opcion 3.2</option>
+            </optgroup>
+ 
+            <input type="button" value="Enviar" onclick="recogerSelect()">
+        </select>
+    </form>
+</body>
+
+</html>
+<!-- 
+https://es.javascript.info/searching-elements-dom
+https://es.stackoverflow.com/questions/43359/como-deshabilitar-un-option-en-un-select -->

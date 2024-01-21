@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+}
+
+.miClase {
+    color: red;
+}
+
+div {
+    text-align: center; 
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#cambiarTextos:hover,
+#cambiarClases:hover,
+#quitarClases:hover {
+    background-color: #000000;
+}
+
+#cambiarTextos {
+    background-color: #50758d;
+}
+
+#cambiarClases {
+    background-color: #8b6fab;
+}
+
+#quitarClases {
+    background-color: #b77408;
+}
+
+p{
+    font-size: 20px;
+}
+
+
