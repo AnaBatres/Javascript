@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Consulta Datos:</title>
+    <script type="text/javascript" src="contabilidad2.js"; ></script>
+    <link rel='stylesheet' href="Estilos.css">
+</head>
+
+<body>
+<H1><strong>Consulta BBDD del servidor.</strong></H1>
+<p>Consultar CONTABILIDAD:</p>
+<input id="Consultar" type="button" value="Consultar" class="boton">
+
+<p>Seleción Ingresos - Gastos</p>
+<input type="checkbox" id=tipo_ingreso name="tipo_ingreso" value="Ingreso">
+<label for="ingreso"> Ingreso </label><br>
+<input type="checkbox" id=tipo_gasto name="tipo_gasto" value="Gasto">
+<label for="gasto"> Gasto </label><br>
+
+<H1 id=tituloTabla style="visibility:hidden;">Tabla de presentación de datos:</H1>
+<div id="contenido">
+
+</div>
+
+</body>
+</html>
